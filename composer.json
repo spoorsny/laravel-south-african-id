@@ -1,13 +1,35 @@
 {
-    "name": "laravel/laravel",
-    "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
-    "license": "MIT",
+    "name": "spoorsny/laravel-south-african-id",
+    "description": "A validation rule and Eloquent attribute cast for a South African government-issued personal identification number, for Laravel.",
+    "type": "library",
+    "license": "GPL-3.0-or-later",
+    "keywords": [
+        "cast",
+        "id number",
+        "identity number",
+        "laravel",
+        "south africa",
+        "spoorsny",
+        "validation rule",
+        "validation"
+    ],
+    "support": {
+        "source": "https://github.com/spoorsny/laravel-south-african-id/",
+        "issues": "https://github.com/spoorsny/laravel-south-african-id/issues"
+    },
+    "authors": [
+        {
+            "name": "Geoffrey Bernardo van Wyk",
+            "email": "geoffrey@vanwyk.biz",
+            "homepage": "https://geoffreyvanwyk.dev",
+            "role": "Programmer"
+        }
+    ],
     "require": {
         "php": "^8.2",
         "laravel/framework": "^11.9",
-        "laravel/tinker": "^2.9"
+        "laravel/tinker": "^2.9",
+        "spoorsny/south-african-id": "^1.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -19,15 +41,18 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/",
-            "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/"
+            "Spoorsny\\Laravel\\": "app/",
+            "Spoorsny\\Laravel\\Database\\Factories\\": "database/factories/",
+            "Spoorsny\\Laravel\\Database\\Seeders\\": "database/seeders/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
-        }
+            "Spoorsny\\Laravel\\Tests\\": "tests/"
+        },
+        "files": [
+            "vendor/spoorsny/south-african-id/tests/SouthAfricanIdDataProvider.php"
+        ]
     },
     "scripts": {
         "post-autoload-dump": [

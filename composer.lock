@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7e8c3c14ff33b199b4a0838993eb8423",
+    "content-hash": "c190415695477c7a564f8b35e752b8d0",
     "packages": [
         {
             "name": "brick/math",
@@ -3107,6 +3107,61 @@
                 }
             ],
             "time": "2024-04-27T21:32:50+00:00"
+        },
+        {
+            "name": "spoorsny/south-african-id",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spoorsny/php-south-african-id.git",
+                "reference": "a35683081e08fdcef00120a3bcc8b6c8b5012f13"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spoorsny/php-south-african-id/zipball/a35683081e08fdcef00120a3bcc8b6c8b5012f13",
+                "reference": "a35683081e08fdcef00120a3bcc8b6c8b5012f13",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.3"
+            },
+            "require-dev": {
+                "ext-xdebug": "*",
+                "friendsofphp/php-cs-fixer": "^3.59",
+                "phpunit/phpunit": "^11.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spoorsny\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Geoffrey Bernardo van Wyk",
+                    "email": "geoffrey@vanwyk.biz",
+                    "homepage": "https://geoffreyvanwyk.dev",
+                    "role": "Programmer"
+                }
+            ],
+            "description": "A self-validating value object encapsulating a South African government-issued personal identification number.",
+            "keywords": [
+                "ID number",
+                "Value Object",
+                "identity number",
+                "idnumber",
+                "south african",
+                "spoorsny"
+            ],
+            "support": {
+                "issues": "https://github.com/spoorsny/php-south-african-id/issues",
+                "source": "https://github.com/spoorsny/php-south-african-id/"
+            },
+            "time": "2024-07-12T13:04:16+00:00"
         },
         {
             "name": "symfony/clock",
