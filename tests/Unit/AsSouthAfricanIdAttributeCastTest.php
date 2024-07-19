@@ -17,11 +17,10 @@
 
 namespace Spoorsny\Laravel\Tests\Unit;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Capsule\Manager as DB;
+use Illuminate\Database\Eloquent\Model;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
-
 use Spoorsny\Laravel\Casts\AsSouthAfricanId;
 use Spoorsny\Laravel\Tests\TestCase;
 use Spoorsny\ValueObjects\SouthAfricanId;

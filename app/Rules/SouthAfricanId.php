@@ -18,15 +18,15 @@
 namespace Spoorsny\Laravel\Rules;
 
 use Closure;
-use InvalidArgumentException;
-
 use Illuminate\Contracts\Validation\ValidationRule;
+use InvalidArgumentException;
 use Spoorsny\ValueObjects\SouthAfricanId as SouthAfricanIdValueObject;
 
 /**
  * Rule that validates that a string is a South African identity number.
  *
  * @see        {@link https://laravel.com/docs/11.x/validation#using-rule-objects}
+ *
  * @author     Geoffrey Bernardo van Wyk <geoffrey@vanwyk.biz>
  * @copyright  2024 Geoffrey Bernardo van Wyk {@link https://geoffreyvanwyk.dev}
  * @license    {@link http://www.gnu.org/copyleft/gpl.html} GNU GPL v3 or later

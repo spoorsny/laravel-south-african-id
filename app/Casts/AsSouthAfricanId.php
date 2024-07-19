@@ -25,6 +25,7 @@ use Spoorsny\ValueObjects\SouthAfricanId;
  * Casts a string Eloquent Model attribute to an instance of \Spoorsny\ValueObjects\SouthAfricanId.
  *
  * @see        {@link https://laravel.com/docs/11.x/eloquent-mutators#value-object-casting}
+ *
  * @author     Geoffrey Bernardo van Wyk <geoffrey@vanwyk.biz>
  * @copyright  2024 Geoffrey Bernardo van Wyk {@link https://geoffreyvanwyk.dev}
  * @license    {@link http://www.gnu.org/copyleft/gpl.html} GNU GPL v3 or later

@@ -21,10 +21,9 @@ use Illuminate\Support\Facades\Validator;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\DataProviderExternal;
 use PHPUnit\Framework\Attributes\Test;
-
-use Spoorsny\Tests\SouthAfricanIdDataProvider;
 use Spoorsny\Laravel\Rules\SouthAfricanId;
 use Spoorsny\Laravel\Tests\TestCase;
+use Spoorsny\Tests\SouthAfricanIdDataProvider;
 
 /**
  * Unit test for validation rule \Spoorsny\Laravel\Rules\SouthAfricanId.
@@ -37,8 +36,8 @@ use Spoorsny\Laravel\Tests\TestCase;
 class SouthAfricanIdValidationRuleTest extends TestCase
 {
     /**
-      * The validation rule passes a valid South African ID.
-      */
+     * The validation rule passes a valid South African ID.
+     */
     #[DataProviderExternal(SouthAfricanIdDataProvider::class, methodName: 'validSouthAfricanIdNumbers')]
     #[Test]
     public function it_passes_valid_south_african_id(string $southAfricanId): void
@@ -46,15 +45,15 @@ class SouthAfricanIdValidationRuleTest extends TestCase
         $validator = Validator::make([
             'south_african_id' => $southAfricanId,
         ], [
-            'south_african_id' => [new SouthAfricanId()]
+            'south_african_id' => [new SouthAfricanId()],
         ]);
 
         $this->assertTrue($validator->passes());
     }
 
     /**
-      * The validation rule fails an invalid South African ID.
-      */
+     * The validation rule fails an invalid South African ID.
+     */
     #[DataProviderExternal(SouthAfricanIdDataProvider::class, methodName: 'nonnumericStrings')]
     #[DataProviderExternal(SouthAfricanIdDataProvider::class, methodName: 'fewerThan13Digits')]
     #[DataProviderExternal(SouthAfricanIdDataProvider::class, methodName: 'moreThan13Digits')]
@@ -67,7 +66,7 @@ class SouthAfricanIdValidationRuleTest extends TestCase
         $validator = Validator::make([
             'south_african_id' => $southAfricanId,
         ], [
-            'south_african_id' => [new SouthAfricanId()]
+            'south_african_id' => [new SouthAfricanId()],
         ]);
 
         $this->assertTrue($validator->fails());
