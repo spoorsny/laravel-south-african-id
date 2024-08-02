@@ -23,7 +23,7 @@ use PHPUnit\Framework\Attributes\DataProviderExternal;
 use PHPUnit\Framework\Attributes\Test;
 use Spoorsny\Laravel\Rules\SouthAfricanId;
 use Spoorsny\Laravel\Tests\TestCase;
-use Spoorsny\Tests\SouthAfricanIdDataProvider;
+use Spoorsny\Tests\DataProviders\SouthAfricanIdDataProvider;
 
 /**
  * Unit test for validation rule \Spoorsny\Laravel\Rules\SouthAfricanId.
