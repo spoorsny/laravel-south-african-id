@@ -40,7 +40,7 @@ class BirthDateMatchSouthAfricanIdRuleTest extends TestCase
             'south_african_id' => '240620 3710 097',
             'birth_date' => '1924-06-20',
         ], [
-            'birth_date' => [new BirthDateMatchSouthAfricanId()],
+            'birth_date' => [new BirthDateMatchSouthAfricanId],
         ]);
 
         $this->assertTrue($validator->passes());
@@ -53,7 +53,7 @@ class BirthDateMatchSouthAfricanIdRuleTest extends TestCase
             'south_african_id' => '240620 3710 097',
             'birth_date' => '1925-06-20',
         ], [
-            'birth_date' => [new BirthDateMatchSouthAfricanId()],
+            'birth_date' => [new BirthDateMatchSouthAfricanId],
         ]);
 
         $this->assertTrue($validator->fails());
@@ -66,7 +66,7 @@ class BirthDateMatchSouthAfricanIdRuleTest extends TestCase
             'south_african_id' => '240620 3710 097',
             'birth_date' => 'blurb',
         ], [
-            'birth_date' => [new BirthDateMatchSouthAfricanId()],
+            'birth_date' => [new BirthDateMatchSouthAfricanId],
         ]);
 
         $this->assertTrue($validator->fails());
@@ -78,7 +78,7 @@ class BirthDateMatchSouthAfricanIdRuleTest extends TestCase
         $validator = Validator::make([
             'birth_date' => '1924-06-20',
         ], [
-            'birth_date' => [new BirthDateMatchSouthAfricanId()],
+            'birth_date' => [new BirthDateMatchSouthAfricanId],
         ]);
 
         $this->assertTrue($validator->fails());

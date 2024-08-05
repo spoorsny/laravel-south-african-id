@@ -50,6 +50,7 @@ class BirthDateMatchSouthAfricanId implements DataAwareRule, ValidationRule
     {
         if (! isset($this->data['south_african_id'])) {
             $fail('There is no field named south_african_id.');
+
             return;
         }
 
@@ -57,11 +58,13 @@ class BirthDateMatchSouthAfricanId implements DataAwareRule, ValidationRule
             $birthDate = new Carbon($value);
         } catch (InvalidFormatException $e) {
             $fail('The :attribute field is not a valid date.');
+
             return;
         }
 
         if ($birthDate->format('ymd') !== substr($this->data['south_african_id'], 0, 6)) {
             $fail('The :attribute field does not match the South African ID field.');
+
             return;
         }
 
