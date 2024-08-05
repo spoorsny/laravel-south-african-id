@@ -18,10 +18,10 @@
 namespace Spoorsny\Laravel\Rules;
 
 use Carbon\Carbon;
+use Carbon\Exceptions\InvalidFormatException;
 use Closure;
 use Illuminate\Contracts\Validation\DataAwareRule;
 use Illuminate\Contracts\Validation\ValidationRule;
-use Spoorsny\ValueObjects\SouthAfricanId;
 
 /**
  * Rule that validates that a date string matches the date segment of a South African identity number.
@@ -49,22 +49,22 @@ class BirthDateMatchSouthAfricanId implements DataAwareRule, ValidationRule
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
         if (! isset($this->data['south_african_id'])) {
+            $fail('There is no field named south_african_id.');
             return;
         }
 
         try {
-            $southAfricanId = new SouthAfricanId($this->data['south_african_id']);
-        } catch (\Throwable $th) {
+            $birthDate = new Carbon($value);
+        } catch (InvalidFormatException $e) {
+            $fail('The :attribute field is not a valid date.');
             return;
         }
 
-        $birthDate = new Carbon($value);
-
-        if ($birthDate->format('ymd') === $southAfricanId->dateSegment()) {
+        if ($birthDate->format('ymd') !== substr($this->data['south_african_id'], 0, 6)) {
+            $fail('The :attribute field does not match the South African ID field.');
             return;
         }
 
-        $fail('The :attribute field does not match the South African ID field.');
     }
 
     /**
