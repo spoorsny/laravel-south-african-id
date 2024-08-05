@@ -57,7 +57,7 @@
         ]
     },
     "scripts": {
-        "cs-fix": "./vendor/bin/pint",
+        "cs-fix": "./vendor/bin/pint --preset psr12",
         "test": "./artisan test",
         "test-coverage": "XDEBUG_MODE=coverage ./artisan test --coverage --coverage-clover phpunit-code-coverage-clover.xml",
         "test-coverage-check": "./vendor/bin/coverage-check phpunit-code-coverage-clover.xml 100 --only-percentage",
