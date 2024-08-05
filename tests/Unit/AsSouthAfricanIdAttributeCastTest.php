@@ -39,7 +39,7 @@ class AsSouthAfricanIdAttributeCastTest extends TestCase
     {
         parent::setUp();
 
-        $db = new DB;
+        $db = new DB();
 
         $db->addConnection([
             'driver' => 'sqlite',
@@ -85,7 +85,7 @@ class AsSouthAfricanIdAttributeCastTest extends TestCase
     public function it_casts_attribute_to_a_string_when_setting_value_into_database(): void
     {
         // Arrange
-        $person = new Person;
+        $person = new Person();
 
         // Act
         $person->south_african_id = new SouthAfricanId('9308062469083');
