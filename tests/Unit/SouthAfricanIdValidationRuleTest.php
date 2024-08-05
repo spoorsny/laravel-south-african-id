@@ -21,7 +21,6 @@ use Illuminate\Support\Facades\Validator;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\DataProviderExternal;
 use PHPUnit\Framework\Attributes\Test;
-
 use Spoorsny\Laravel\Rules\SouthAfricanId;
 use Spoorsny\Laravel\Tests\TestCase;
 use Spoorsny\Tests\DataProviders\SouthAfricanIdDataProvider;
@@ -46,7 +45,7 @@ class SouthAfricanIdValidationRuleTest extends TestCase
         $validator = Validator::make([
             'south_african_id' => $southAfricanId,
         ], [
-            'south_african_id' => [new SouthAfricanId()],
+            'south_african_id' => [new SouthAfricanId],
         ]);
 
         $this->assertTrue($validator->passes());
@@ -67,7 +66,7 @@ class SouthAfricanIdValidationRuleTest extends TestCase
         $validator = Validator::make([
             'south_african_id' => $southAfricanId,
         ], [
-            'south_african_id' => [new SouthAfricanId()],
+            'south_african_id' => [new SouthAfricanId],
         ]);
 
         $this->assertTrue($validator->fails());

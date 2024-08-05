@@ -20,7 +20,6 @@ namespace Spoorsny\Laravel\Tests\Unit;
 use Illuminate\Support\Facades\Validator;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
-
 use Spoorsny\Laravel\Rules\BirthDateMatchSouthAfricanId;
 use Spoorsny\Laravel\Tests\TestCase;
 
@@ -41,7 +40,7 @@ class BirthDateMatchSouthAfricanIdRuleTest extends TestCase
             'south_african_id' => '240620 3710 097',
             'birth_date' => '1924-06-20',
         ], [
-            'birth_date' => [new BirthDateMatchSouthAfricanId()],
+            'birth_date' => [new BirthDateMatchSouthAfricanId],
         ]);
 
         $this->assertTrue($validator->passes());
@@ -54,7 +53,7 @@ class BirthDateMatchSouthAfricanIdRuleTest extends TestCase
             'south_african_id' => '240620 3710 097',
             'birth_date' => '1925-06-20',
         ], [
-            'birth_date' => [new BirthDateMatchSouthAfricanId()],
+            'birth_date' => [new BirthDateMatchSouthAfricanId],
         ]);
 
         $this->assertTrue($validator->fails());

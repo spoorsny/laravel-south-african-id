@@ -17,23 +17,22 @@
 
 namespace Spoorsny\Laravel\Rules;
 
-use Closure;
-
 use Carbon\Carbon;
+use Closure;
 use Illuminate\Contracts\Validation\DataAwareRule;
 use Illuminate\Contracts\Validation\ValidationRule;
-
 use Spoorsny\ValueObjects\SouthAfricanId;
 
 /**
  * Rule that validates that a date string matches the date segment of a South African identity number.
  *
  * @see        {@link https://laravel.com/docs/11.x/validation#using-rule-objects}
+ *
  * @author     Geoffrey Bernardo van Wyk <geoffrey@vanwyk.biz>
  * @copyright  2024 Geoffrey Bernardo van Wyk {@link https://geoffreyvanwyk.dev}
  * @license    {@link http://www.gnu.org/copyleft/gpl.html} GNU GPL v3 or later
  */
-class BirthDateMatchSouthAfricanId implements ValidationRule, DataAwareRule
+class BirthDateMatchSouthAfricanId implements DataAwareRule, ValidationRule
 {
     /**
      * All of the data under validation.
