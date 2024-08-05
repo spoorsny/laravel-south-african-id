@@ -45,7 +45,7 @@ class SouthAfricanIdValidationRuleTest extends TestCase
         $validator = Validator::make([
             'south_african_id' => $southAfricanId,
         ], [
-            'south_african_id' => [new SouthAfricanId],
+            'south_african_id' => [new SouthAfricanId()],
         ]);
 
         $this->assertTrue($validator->passes());
@@ -66,7 +66,7 @@ class SouthAfricanIdValidationRuleTest extends TestCase
         $validator = Validator::make([
             'south_african_id' => $southAfricanId,
         ], [
-            'south_african_id' => [new SouthAfricanId],
+            'south_african_id' => [new SouthAfricanId()],
         ]);
 
         $this->assertTrue($validator->fails());
