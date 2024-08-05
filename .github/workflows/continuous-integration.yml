@@ -133,6 +133,7 @@ jobs:
       - name: Make code coverage badge
         uses: timkrase/phpunit-coverage-badge@v1.2.1
         with:
+          report: phpunit-code-coverage-clover.xml
           coverage_badge_path: output/coverage.svg
           push_badge: false
 
