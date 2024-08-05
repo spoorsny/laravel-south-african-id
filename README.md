@@ -81,6 +81,10 @@ protected function casts(): array
 }
 ```
 
+## Contributing
+
+To contribute to the package, see the [Contributing Guide](CONTRIBUTING.md).
+
 ## License
 
 Copyright &copy; 2024 Geoffrey Bernardo van Wyk [https://geoffreyvanwyk.dev](https://geoffreyvanwyk.dev)
