@@ -60,7 +60,7 @@ An attribute of an
 model can be cast to an instance of the South African ID
 value object (`\Spoorsny\ValueObjects\SouthAfricanId` provided by Composer
 package
-[`spoorsny/south-african-id`](https://packagist.org/spoorsny/south-african-id)).
+[`spoorsny/south-african-id`](https://packagist.org/packages/spoorsny/south-african-id)).
 
 ```php
 use Spoorsny\Laravel\Casts\AsSouthAfricanId;
