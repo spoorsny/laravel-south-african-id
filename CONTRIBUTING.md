@@ -10,6 +10,22 @@ commands placing generated files in `app` and not being configurable.
 The Composer script names are according to the
 [Composer Script Names][composer-script-names] specification.
 
+How the package works is explained below:
+
+-   The Laravel services are bootstrapped in a minimal **bootstrap/app.php**.
+-   Autodiscovered service providers are loaded into
+    **bootstrap/cache/packages.php** and **bootstrap/cache/services.php** files by
+    the `post-autoload-dump` hook defined in **composer.json**. The contents of
+    **bootstrap/cache** are ignored by Git.
+-   A minimal **.env** is necessary for running tests and migrations. This file
+    is not ignored by Git, but included in the package. It does not contain any secrets.
+-   A **database/database.sqlite** is created automatically after running
+    `composer install` using the `post-install-cmd` hook defined in
+    **composer.json**. It is referenced by the **.env** file, but ignored by
+    Git. It is needed by some services like Cache to store the cache database
+    table. That is why a migration for that table is included.
+-   Tests are run using an in-memory SQLite database.
+
 ## Prerequisites
 
 To contribute to this project, you will need:
