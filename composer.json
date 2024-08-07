@@ -1,8 +1,8 @@
 {
     "name": "spoorsny/laravel-south-african-id",
-    "description": "A validation rule and Eloquent attribute cast for a South African government-issued personal identification number, for Laravel.",
     "type": "library",
     "license": "GPL-3.0-or-later",
+    "description": "Validation rules and an Eloquent Model attribute cast to value object encapsulating a South African government-issued personal identification number, for Laravel.",
     "keywords": [
         "eloquent",
         "attribute",
@@ -13,7 +13,8 @@
         "south africa",
         "spoorsny",
         "validation rule",
-        "validation"
+        "validation",
+        "package"
     ],
     "support": {
         "source": "https://github.com/spoorsny/laravel-south-african-id/",
@@ -64,13 +65,6 @@
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
-        ],
-        "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
-        ],
-        "post-install-cmd": [
-            "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
-            "@php artisan migrate --graceful --ansi"
         ]
     },
     "extra": {

@@ -5,6 +5,7 @@
 /public/storage
 /storage/*.key
 /vendor
+.env
 .env.backup
 .env.production
 .phpactor.json
@@ -17,5 +18,6 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+storage/logs/laravel.log
 .php-cs-fixer.cache
 phpunit-code-coverage-clover.xml
